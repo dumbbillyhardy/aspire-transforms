@@ -22,6 +22,26 @@ message MintTransaction {
     string notes = 9;
 }
 
+message YnabTransaction {
+    string account = 1;
+    string flag = 2;
+    //google.protobuf.Timestamp date = 3;
+    string payee = 4;
+    string category_group = 5;
+    string category = 6;
+    string memo = 7;
+    double outflow = 8;
+    double inflow = 9;
+
+    enum Status {
+        UNKNOWN = 0;
+        UNCLEARED = 1;
+        CLEARED = 2;
+        RECONCILDED = 3;
+    }
+    Status status = 10;
+}
+
 message AspireTransaction {
     //google.protobuf.Timestamp date = 1;
     double outflow = 2;
@@ -38,4 +58,6 @@ message AspireTransaction {
     }
 
     Status status = 7;
+    // Custom field to force user to look at it.
+    bool approved = 8;
 }
