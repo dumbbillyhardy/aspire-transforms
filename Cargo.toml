@@ -1,0 +1,11 @@
+[package]
+name = "aspire_transformers"
+version = "0.1.0"
+authors = ["Billy Hardy <billyhardy@google.com>"]
+edition = "2018"
+
+[dependencies]
+protobuf = "2.9.0"
+
+[build-dependencies]
+protoc-rust = "2.0"
