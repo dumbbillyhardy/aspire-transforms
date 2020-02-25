@@ -27,11 +27,12 @@ message YnabTransaction {
     string flag = 2;
     //google.protobuf.Timestamp date = 3;
     string payee = 4;
-    string category_group = 5;
-    string category = 6;
-    string memo = 7;
-    double outflow = 8;
-    double inflow = 9;
+    string category_group_and_category = 5;
+    string category_group = 6;
+    string category = 7;
+    string memo = 8;
+    double outflow = 9;
+    double inflow = 10;
 
     enum Status {
         UNKNOWN = 0;
@@ -39,7 +40,7 @@ message YnabTransaction {
         CLEARED = 2;
         RECONCILDED = 3;
     }
-    Status status = 10;
+    Status status = 11;
 }
 
 message AspireTransaction {
